@@ -28,6 +28,33 @@
       gtag('js', new Date());
       gtag('config', 'G-MMZCCY0DP1');
     </script>
+    <style>
+        .students-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .current-students, .past-students {
+            flex-basis: 48%; /* Adjust width as needed */
+        }
+
+        .current-students ul, .past-students ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .current-students ul {
+            padding-left: 20px; /* Add left padding for current students */
+        }
+
+        .past-students ul {
+            padding-left: 20px; /* Add left padding for past students */
+        }
+
+        .current-students ul li, .past-students ul li {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -92,10 +119,25 @@
             rocket launch activities.
         </p> -->
 
-        <h2 class="my-3">Current Students</h2>
-        <p>
-            
-        </p>
+        <h2 class="my-3">Supervision</h2>
+        <div class="students-container">
+            <div class="current-students">
+                <h5>Current Students</h5>
+                <ul>
+                    <li><a href="https://scholar.google.com/citations?user=vup-L7oAAAAJ&hl=en" target="_blank">Anant Mathur</a>, PhD, UNSW (jointly with <a href="https://www.unsw.edu.au/staff/zdravko-botev" target="_blank">Dr. Zdravko Botev</a>)</li>
+                    <li>Ava Vahedi, Masters, UNSW</li>
+                    <li>Hongyu Xu, Masters, UNSW</li>
+                    <li>Seungjoo Lee (Eric), Honors, UNSW</li>
+                    <li>Hua Hu (Yang), Honors, UNSW</li>
+                </ul>
+            </div>
+            <div class="past-students">
+                <h5>Past Students</h5>
+                <ul>
+                    <li><a href="https://fr.linkedin.com/in/teo-nguyen" target="_black">Teo Nguyen</a>, PhD, MQ (jointly with <a href="https://benoit-liquet.github.io/" target="_blank">Prof. Benoit Liquet</a>)</li>
+                </ul>
+            </div>
+        </div>
 
         <br>
         <br>
