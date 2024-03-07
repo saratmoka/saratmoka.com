@@ -1,220 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sarat Moka - Personal Website</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        .students-container {
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #1a5276;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
-
-        .current-students, .past-students {
-            flex-basis: 48%; /* Adjust width as needed */
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 10px 0;
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+        .main-content {
+            flex-basis: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
         }
 
-        .current-students ul, .past-students ul {
-            list-style-type: none;
-            padding: 0;
+        @media only screen and (min-width: 768px) {
+            .main-content {
+                flex-basis: 100%;
+            }
         }
 
-        .current-students ul {
-            padding-left: 20px; /* Add left padding for current students */
-        }
-
-        .past-students ul {
-            padding-left: 20px; /* Add left padding for past students */
-        }
-
-        .current-students ul li, .past-students ul li {
-            margin-bottom: 5px;
+        /* Adjustments for smaller screens */
+        @media only screen and (max-width: 767px) {
+            .container {
+                flex-direction: column;
+            }
+            .main-content {
+                margin-top: 20px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dr Sarat Moka</title>
-    <!-- Facebook sharing -->
-    <meta property="og:url" content="https://saratmoka.com" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Sarat Moka" />
-    <meta property="og:description" content="Researcher and Educator of Probability, Statistics, and Deep Learning" />
-    <meta property="og:image" content="https://saratmoka.com/img/saratImage.jpg" />
-    <meta property="og:image:width" content="1250" />
-    <meta property="og:image:height" content="833" />
-    <!-- Twitter sharing -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Dr Sarat Moka" />
-    <meta name="twitter:description" content="Researcher and Educator of Probability, Statistics, and Deep Learning" />
-    <meta name="twitter:image" content="https://saratmoka.com/img/saratImage.jpg" />
-    <!-- End sharing -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="/img/logo2.png">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S00NGHCYFB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MMZCCY0DP1');
-    </script>
 </head>
-
 <body>
+    <header>
+        <h1>Dr. Sarat Moka</h1>
+        <h2>Lecturer & Researcher</h2>
+    </header>
     <div class="container">
-        <h1 class="my-3"><a href="https://saratmoka.com/" style="color: #005f69">Sarat Moka</a><br></h1>
-        <!--<h2 class="my-3">Expert in Applied Probability and Computational Statistics</h2> -->
-        <h4 class="my-3">(Webpage is under construction)</h4>
-        
-       <!-- <p>
-            <em>"Sometimes it is the people no one can imagine anything of who do the things no one can imagine."</em> ― <strong>Alan Turing</strong> 
-        </p> -->
-        <p>
-            <em>"Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, 
-                stimulating progress, giving birth to evolution."</em> ― <strong>Albert Einstein</strong>
-        </p>
-        <!-- <p>
-            <em>“Programs are meant to be read by humans and only incidentally for computers to execute.”</em> ― Donald Knuth 
-        </p> -->
-        <br>
-        <p>
-            <a style="color: #f00000"><strong>New:</strong></a> The forthcoming book on deep learning, co-authored with 
-            <a href="https://benoit-liquet.github.io/" target="_blank">Professor Benoit Liquet</a> 
-            and <a href="https://yoninazarathy.com/" target="_blank">Associate Professor Yoni Nazarathy</a>, 
-            is nearing publication with CRC Press. All chapter drafts can be accessed at 
-            <a href="https://deeplearningmath.org/" target="_blank">Mathematical Engineering of Deep Learning</a>.
-        </p>
-        <br>
-        <div style="overflow: hidden;"> <!-- Container to clear floats -->
-            <div style="float: left; margin-right: 20px;">
-                <img src="/img/saratImage.jpg" style="width: 250px;" />
-             <!--   <br><br>
-                <img src="/img/FultBadge.png" style="width: 100px;" /> <img src="/img/AllyBadge.png" style="width: 100px;" />
-                <br> -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="/publications">Publications</a>
+            <a href="/research-topics">Research Topics</a>
+        </nav>
+        <div class="main-content">
+            <section id="home">
+            <p>
+                <a style="color: #f00000"><strong>New:</strong></a> The forthcoming book on deep learning, co-authored with 
+                <a href="https://benoit-liquet.github.io/" target="_blank">Professor Benoit Liquet</a> 
+                and <a href="https://yoninazarathy.com/" target="_blank">Associate Professor Yoni Nazarathy</a>, 
+                is nearing publication with CRC Press. All chapter drafts can be accessed at 
+                <a href="https://deeplearningmath.org/" target="_blank">Mathematical Engineering of Deep Learning</a>.
+            </p>
+            <br>
+            <div style="overflow: hidden;"> <!-- Container to clear floats -->
+                <div style="float: left; margin-right: 20px;">
+                    <img src="/img/saratImage.jpg" style="width: 250px;" />
+                 <!--   <br><br>
+                    <img src="/img/FultBadge.png" style="width: 100px;" /> <img src="/img/AllyBadge.png" style="width: 100px;" />
+                    <br> -->
+                </div>
+                <div style="float: right; width: calc(100% - 360px);"> <!-- Adjust width based on image width and margin -->
+                    <br><br><br><br>
+                    <a href="mailto:s.moka@unsw.edu.au">s.moka@unsw.edu.au</a>
+                    <br><br>
+                    <a href="SaratCV.pdf" target="_blank">CV</a> |
+                    <a href="https://scholar.google.co.in/citations?user=jxF6QdgAAAAJ&hl=en" target="_blank">Google Scholar</a> | 
+                    <a href="https://orcid.org/0000-0003-2868-9420" target="_blank">ORCID</a> | 
+                    <a href="https://twitter.com/SaratMoka" target="_blank">@saratmoka (Twitter)</a> |
+                    <a href="https://github.com/saratmoka" target="_blank">GitHub</a>
+                    <br><br>
+                    <!-- <img src="/img/FultBadge.png" style="width: 100px;" /> --> 
+                    <img src="/img/AllyBadge.png" style="width: 100px;" />
+                    <br>
+                </div>
             </div>
-            <div style="float: right; width: calc(100% - 360px);"> <!-- Adjust width based on image width and margin -->
-                <br><br><br>
-                <a href="mailto:s.moka@unsw.edu.au">s.moka@unsw.edu.au</a>
-                <br>
-                <a href="SaratCV.pdf" target="_blank">CV</a> |
-                <a href="https://scholar.google.co.in/citations?user=jxF6QdgAAAAJ&hl=en" target="_blank">Google Scholar</a> | 
-                <a href="https://orcid.org/0000-0003-2868-9420" target="_blank">ORCID</a> | 
-                <a href="https://twitter.com/SaratMoka" target="_blank">@saratmoka (Twitter)</a> |
-                <a href="https://github.com/saratmoka" target="_blank">GitHub</a>
-                <br><br>
-                <img src="/img/FultBadge.png" style="width: 100px;" /> <img src="/img/AllyBadge.png" style="width: 100px;" />
-                <br>
-            </div>
-        </div>
-        <br>
-        <p>
-            I am a lecturer at <a href="https://www.unsw.edu.au/science/our-schools/maths" target="_blank">School of Mathematics and Statistics</a> of The University of New South Wales (UNSW). 
-            I am also a <a href="https://researchers.mq.edu.au/en/persons/sarat-moka" target="_blank"> honorary reserach fellow</a>  
-            in <a href="https://researchers.mq.edu.au/en/organisations/school-of-mathematical-and-physical-sciences" target="_blank">School of Mathematical and Physical Science</a> 
-            at Macquarie University.
-        </p>
-        <p>
-            My current research and teaching interests span across Applied Probability, Computational Statistics, Machine Learning, and Deep Learning</a>. 
-        </p>
-        <p>
-            Prior to joining UNSW in 2023, I served as a Senior Research Fellow in 
-            <a href="https://researchers.mq.edu.au/en/organisations/school-of-mathematical-and-physical-sciences" target="_blank">School of Mathematical and Physical Science</a>  
-            at Macquarie University 
-            for nearly two years. Prior to that, I held the position of ACEMS (ARC Centre of Excellence for Mathematical & Statistical Frontiers) 
-            Postdoctoral Researcher in <a href="https://smp.uq.edu.au/" target="_blank">School of Mathematics and Physics</a> at The University of Queensland for four years. 
-            My academic journey includes earning a PhD in Applied Probability, along with Master's and Bachelor's degrees in Engineering 
-            with a focus on Electricals, Electronics, and Communications, at <a href="https://iisc.ac.in/" target="_blank">Indian Institute of Science</a> 
-            and <a href="https://www.andhrauniversity.edu.in/" target="_blank">Andhra University</a>, respectively. Before pursuing my doctoral studies, 
-            I contributed as a scientist at the <a href="https://www.isro.gov.in/" target="_blank">Indian Space Research Organization</a> (SHAR, Sriharikota), 
-            where I worked on Communication Networks that support rocket launch activities.
-        </p>
-        
-       <!-- <h2 class="my-3">Previously</h2>
-        <p>
-            Before joining UNSW in 2023, I served as a Senior Research Fellow in the School of Mathematical and Physical Sciences at Macquarie University 
-            for nearly two years. Prior to that, I held the position of ACEMS (ARC Centre of Excellence for Mathematical & Statistical Frontiers) 
-            Postdoctoral Researcher at The University of Queensland for four years before transitioning to Macquarie University. 
-            My academic journey includes earning a PhD in Applied Probability, along with Master's and Bachelor's degrees in Engineering 
-            with a focus on Electricals, Electronics, and Communications. Before pursuing my doctoral studies, 
-            I contributed as a scientist at the Indian Space Research Organization, where I focused on Communication Networks to support 
-            rocket launch activities.
-        </p> -->
-    <h2 class="my-3" style="color: #005f69;">Research</h2>
-        My research aims to devise efficient algorithms for addressing challenging problems, often they are NP-hard, 
-        within the realms of Applied Probability, Computational Statistics, Machine Learning, and Deep Learning. 
-        Keywords relevant to my research include Model Selection, Best Subset Selection, Monte Carlo Simulation, Spatial Point Processes, 
-        Bayesian Inference, Perfect Sampling, Importance Sampling, Unbiased Estimation, Large Deviations Theory, Variance Reduction Techniques, 
-        and Queueing Theory. Explore the following topics for detailed insights into my research projects, or access  <a href="SaratCV.pdf" target="_blank">my CV</a> for a 
-        comprehensive list of publications. 
-        <br>
-        <br>
-        <a href="/applied-probability">Applied Probability</a> |
-        <a href="/computational-statistics">Computational Statistics</a> | 
-        <a href="">Machine Learning</a> | 
-        <a href="">Deep Learning</a> |
-        <a href="">Queueing Theory</a>
-        <br><br>
-        If you are a master's or honors student, or are eligible for a PhD and interested in collaborating on a project related to any of these topics, please don't hesitate to contact me via email at  <a href="mailto:s.moka@unsw.edu.au">s.moka@unsw.edu.au</a>.
-        <br><br>
-    <h2 class="my-3" style="color: #005f69;">Research Students</h2>
-        <h5>Current</h5>
-        <ul>
-            <li><a href="https://scholar.google.com/citations?user=vup-L7oAAAAJ&hl=en" target="_blank">Anant Mathur</a>, PhD, UNSW (co-supervision with <a href="https://www.unsw.edu.au/staff/zdravko-botev" target="_blank">Dr. Zdravko Botev</a>)</li>
-            <li>Ava Vahedi, Masters, UNSW</li>
-            <li>Hongyu Xu, Masters, UNSW</li>
-            <li>Seungjoo Lee (Eric), Honors, UNSW</li>
-            <li>Hua Hu (Yang), Honors, UNSW</li>
-        </ul>
-        <h5>Graduated PhD Student</h5>
-        <ul>
-            <li><a href="https://fr.linkedin.com/in/teo-nguyen" target="_black">Teo Nguyen</a>, PhD, MQ (co-supervision with <a href="https://benoit-liquet.github.io/" target="_blank">Prof. Benoit Liquet</a>)</li>
-        </ul><br>
-    <h2 class="my-3" style="color: #005f69;">Teaching</h2>
-        <h5>2024</h5>
-        <ul>
-            <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC5836?year=2024" target="_blank">Data Mining and Machine Learning (ZZSC5836)</a>, Hexamester 3</li>
-            <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC9020/?year=2024" target="_blank">Data Science Project (ZZSC9020)</a>, Hexamester 5</li>
-        </ul>
-        <h5>Past</h5>
-        <ul>
-            <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC5836?year=2023" target="_blank">Data Mining and Machine Learning (ZZSC5836)</a>, Hexamester 3, 2023</li>
-            <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC9020/?year=2023" target="_blank">Data Science Project (ZZSC9020)</a>, Hexamester 5, 2023</li>
-            <li> <a href="https://coursehandbook.mq.edu.au/2020/units/STAT3110" target="_blank">Statistical Inference (STAT3110)</a>, Semester 2, 2022, MQ</li>
-            <li> <a href="https://deeplearningmath.org/index_amsi" target="_blank">The Mathematical Engineering of Deep Learning</a>, AMSI Summer School, 2021</li>
-            <li> <a href="https://my.uq.edu.au/programs-courses/course.html?course_code=STAT3500" target="_blank">Problems and Applications in Modern Statistics (STAT3500/7500)</a>, Semester 2, 2020, UQ</li>
-            <li> <a href="https://my.uq.edu.au/programs-courses/course.html?course_code=STAT3500" target="_blank">Problems and Applications in Modern Statistics (STAT3500/7500)</a>, Semester 2, 2019, UQ</li>
-        </ul>
-        <br>
-        <h2 class="my-3" style="color: #005f69;">Funding</h2>
-        <div class="students-container">
-            <div class="current-students">
-                <h5>2024</h5>
+                <h2>About Me</h2>
+                <p>
+                    I am a lecturer at <a href="https://www.unsw.edu.au/science/our-schools/maths" target="_blank">School of Mathematics and Statistics</a> of The University of New South Wales (UNSW). 
+                    I am also a <a href="https://researchers.mq.edu.au/en/persons/sarat-moka" target="_blank"> honorary reserach fellow</a>  
+                    in <a href="https://researchers.mq.edu.au/en/organisations/school-of-mathematical-and-physical-sciences" target="_blank">School of Mathematical and Physical Science</a> 
+                    at Macquarie University. 
+                </p>
+                <p>
+                    My current research and teaching interests span across Applied Probability, Computational Statistics, Machine Learning, and Deep Learning</a>. 
+                </p>
+                <p>
+                    Prior to joining UNSW in 2023, I served as a Senior Research Fellow in 
+                    <a href="https://researchers.mq.edu.au/en/organisations/school-of-mathematical-and-physical-sciences" target="_blank">School of Mathematical and Physical Science</a>  
+                    at Macquarie University 
+                    for nearly two years. Prior to that, I held the position of ACEMS (ARC Centre of Excellence for Mathematical & Statistical Frontiers) 
+                    Postdoctoral Researcher in <a href="https://smp.uq.edu.au/" target="_blank">School of Mathematics and Physics</a> at The University of Queensland for four years. 
+                    My academic journey includes earning a PhD in Applied Probability, along with Master's and Bachelor's degrees in Engineering 
+                    with a focus on Electricals, Electronics, and Communications, at <a href="https://iisc.ac.in/" target="_blank">Indian Institute of Science</a> 
+                    and <a href="https://www.andhrauniversity.edu.in/" target="_blank">Andhra University</a>, respectively. Before pursuing my doctoral studies, 
+                    I contributed as a scientist at the <a href="https://www.isro.gov.in/" target="_blank">Indian Space Research Organization</a> (SHAR, Sriharikota), 
+                    where I worked on Communication Networks that support rocket launch activities.
+                </p>
+            </section>
+            <br>
+            <section id="research">
+                <h2>Research Overview</h2>
+                <p>My research aims to devise efficient algorithms for addressing challenging problems, often they are NP-hard, 
+                    within the realms of Applied Probability, Computational Statistics, Machine Learning, and Deep Learning. 
+                    Keywords relevant to my research include Model Selection, Best Subset Selection, Monte Carlo Simulation, Spatial Point Processes, 
+                    Bayesian Inference, Perfect Sampling, Importance Sampling, Unbiased Estimation, Large Deviations Theory, Variance Reduction Techniques, 
+                    and Queueing Theory. </p>
+            </section>
+            <br>
+            <section id="research-students">
+                <h2>Research Students</h2>
+                <h3>Current</h3>
                 <ul>
-                    <li> QQQQQ </li>
+                    <li><a href="https://scholar.google.com/citations?user=vup-L7oAAAAJ&hl=en" target="_blank">Anant Mathur</a>, PhD, UNSW (co-supervision with <a href="https://www.unsw.edu.au/staff/zdravko-botev" target="_blank">Dr. Zdravko Botev</a>)</li>
+                    <li>Ava Vahedi, Masters, UNSW</li>
+                    <li>Hongyu Xu, Masters, UNSW</li>
+                    <li>Seungjoo Lee (Eric), Honors, UNSW</li>
+                    <li>Hua Hu (Yang), Honors, UNSW</li>
                 </ul>
-            </div>
-            <div class="past-students">
-                <h5>Past</h5>
+                <br>
+                <h3>Graduated PhD Student</h3>
                 <ul>
-                    <li> QQQQQ </li>
-                </ul>
-            </div>
-        </div>
-<!--        <h2 class="my-3" style="color: #005f69;">My Favorite Books</h2>
-        <div class="students-container">
-            <div class="current-students">
-                <h5>2024</h5>
+                    <li><a href="https://fr.linkedin.com/in/teo-nguyen" target="_black">Teo Nguyen</a>, PhD, MQ (co-supervision with <a href="https://benoit-liquet.github.io/" target="_blank">Prof. Benoit Liquet</a>)</li>
+                </ul><br>
+            </section>
+            <section id="Teaching">
+                <h2>Teaching</h2>
+                <h3>2024</h3>
                 <ul>
                     <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC5836?year=2024" target="_blank">Data Mining and Machine Learning (ZZSC5836)</a>, Hexamester 3</li>
+                    <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC9020/?year=2024" target="_blank">Data Science Project (ZZSC9020)</a>, Hexamester 5</li>
                 </ul>
-            </div>
-            <div class="past-students">
-                <h5>Past</h5>
+                <h3>Past</h3>
                 <ul>
                     <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC5836?year=2023" target="_blank">Data Mining and Machine Learning (ZZSC5836)</a>, Hexamester 3, 2023</li>
+                    <li> <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2024/ZZSC9020/?year=2023" target="_blank">Data Science Project (ZZSC9020)</a>, Hexamester 5, 2023</li>
+                    <li> <a href="https://coursehandbook.mq.edu.au/2020/units/STAT3110" target="_blank">Statistical Inference (STAT3110)</a>, Semester 2, 2022, MQ</li>
+                    <li> <a href="https://deeplearningmath.org/index_amsi" target="_blank">The Mathematical Engineering of Deep Learning</a>, AMSI Summer School, 2021</li>
+                    <li> <a href="https://my.uq.edu.au/programs-courses/course.html?course_code=STAT3500" target="_blank">Problems and Applications in Modern Statistics (STAT3500/7500)</a>, Semester 2, 2020, UQ</li>
+                    <li> <a href="https://my.uq.edu.au/programs-courses/course.html?course_code=STAT3500" target="_blank">Problems and Applications in Modern Statistics (STAT3500/7500)</a>, Semester 2, 2019, UQ</li>
                 </ul>
-            </div>
-        </div> -->
-        <br>
-        <br>
-        <br>
+                <br>
+            </section>
+        </div>
     </div>
+    <footer>
+        <p>&copy; 2024 Dr. Sarat Moka</p>
+    </footer>
 </body>
 </html>
